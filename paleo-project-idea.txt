@@ -1,0 +1,12 @@
+1. Sloth
+eeb177-student@eeb177-VirtualBox:~/Desktop/Final_Project$ tail -n +18  pbdb_data-5sloth.csv | cut -f10 | uniq -u | wc -l
+38
+
+2. Penguin
+eeb177-student@eeb177-VirtualBox:~/Desktop/Final_Project$ tail -n +18  pbdb_datapenguin.csv | cut -f10 | uniq -u | wc -l
+57
+
+
+3. Squirrel
+eeb177-student@eeb177-VirtualBox:~/Desktop/Final_Project$ tail -n +18  pbdb_data-6squirrel.csv | cut -f10 | uniq -u | wc -l
+26

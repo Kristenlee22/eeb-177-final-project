@@ -1,0 +1,16 @@
+For my final project, I am intersted in analyzing the evolutionary history of a certain family from the PBDB database (either sloth, penguin, squirrel).
+With PBDB csv files, I will have to extract data, format it for quantitative analysis, and visualize the results. Potentially, I could cross-reference the time periods for each occurance and the levels of occurance for each species. Or I am considering analyzing locational data for the occurances and creating a map plot. So far I have chosen 3 different families as options to focus on for this project- bradypodidae (238 occurances & 38 species), Sphenisciformes (261 occurances & 57 species), sciurus (107 occurances, 26 species).
+
+
+Penguin
+eeb177-student@eeb177-VirtualBox:~/Desktop/Final_Project$ tail -n +18  pbdb_datapenguin.csv | cut -f10 | uniq -u | wc -l
+57
+
+Sloth
+eeb177-student@eeb177-VirtualBox:~/Desktop/Final_Project$ tail -n +18  pbdb_data-5sloth.csv | cut -f10 | uniq -u | wc -l
+38
+
+Squirrel
+eeb177-student@eeb177-VirtualBox:~/Desktop/Final_Project$ tail -n +18  pbdb_data-6squirrel.csv | cut -f10 | uniq -u | wc -l
+26
+
