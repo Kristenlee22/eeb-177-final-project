@@ -1,0 +1,32 @@
+---
+title: "Final Project R Visual"
+author: "Kristen Lee"
+date: "March 12, 2017"
+output: md_document
+---
+
+```{r}
+library(ggplot2)
+
+setwd("/home/eeb177-student/Desktop/eeb-177/eeb-177-final-project/final-project/")
+
+pilosa <- read.csv("/home/eeb177-student/Desktop/eeb-177/eeb-177-final-project/final-project/mean_ages_for_r.csv", header = F, as.is = T)
+  
+names(pilosa) <- c("Species", "Age")
+head(pilosa)
+
+```
+
+```{r}
+pilosa_occ <- ggplot(pilosa, aes(Species, color = Age))
+pilosa_occ <- pilosa_occ + geom_bar()
+pilosa_occ <- pilosa_occ + coord_flip() + theme(axis.text.y = element_text(size=3)) +theme(axis.ticks.y=element_blank())
+pilosa_occ + scale_y_continuous(limits = c(0,40), expand = c(0, 0), breaks = c(0, 10, 20, 30, 40)) + labs(title = "Species Counts and Mean-Ages", x= "Species", y= "Occurences") 
+pilosa_occ
+
+```
+
+```{r}
+ggsave(filename = "Species_Counts_Means_in_R.png", plot = pilosa_occ)
+
+```
